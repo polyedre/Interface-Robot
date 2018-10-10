@@ -1,0 +1,11 @@
+<DOCTYPE html>
+  <html>
+    <div class="main">
+      <p>
+        La roue 1 tourne à #{tours_1} tr/s.
+      </p>
+      <p>
+        La roue 2 tourne à #{tours_2} tr/s.
+      </p>
+    </div>
+  </html>
