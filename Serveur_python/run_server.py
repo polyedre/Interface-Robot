@@ -18,6 +18,7 @@ class MyHTTPRequestHandler(server.BaseHTTPRequestHandler):
         self.send_response(200)
 
         self.send_header('content-type', 'text-json')
+        self.send_header('Access-Control-Allow-Origin', '*')
         self.end_headers()
 
         with open(file_name, "r") as file_object:
