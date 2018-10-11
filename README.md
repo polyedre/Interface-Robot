@@ -46,3 +46,13 @@ et d'afficher via le template le fichier JSON transmis.
  - La partie communication avec le Robot :
    - Créer un faux robot capable de communiquer en bluetooth.
    - Gérer la communication avec le Robot.
+
+## Liste des paramètres à afficher
+
+ - Position
+ - Angle
+ - Vitesse
+ - Accélération
+ - Carte de la table avec la position
+ - Codeurs (nombre de tours des roues)
+ - Capteurs de proximité (avec valeur de seuil et changement de couleur en fonction)
