@@ -2,6 +2,8 @@
 
 from http import server
 
+file_name = "data.json"
+
 def run(server_class=server.HTTPServer, handler_class=server.BaseHTTPRequestHandler, port=3000):
     """Lance le server."""
     print("Lancement du server sur le port {}.".format(port))
@@ -18,10 +20,8 @@ class MyHTTPRequestHandler(server.BaseHTTPRequestHandler):
         self.send_header('content-type', 'text-json')
         self.end_headers()
 
-        self.wfile.write( b"""{
-        \"tours_1\" : 60,
-        \"tours_2\" : 70
-        }""")
+        with open(file_name, "r") as file_object:
+            self.wfile.write(file_object.read().encode('utf-8'))
 
         return
 
